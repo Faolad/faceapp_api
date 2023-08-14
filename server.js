@@ -3,10 +3,10 @@ import cors from 'cors';
 import bcrypt from 'bcrypt';
 
 
-import register from './controllers/register';
-import signin from './controllers/signin';
-import profile from './controllers/profile';
-import image  from './controllers/image';
+import handleRegister from './controllers/register.js'
+import handleSignin from './controllers/signin.js'
+import profileGet from './controllers/profile.js'
+import {imagePut, handleApi}  from './controllers/image.js'
 
 import knex from 'knex'
 const db = knex({
