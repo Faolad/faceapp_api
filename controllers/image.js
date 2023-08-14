@@ -37,7 +37,7 @@ const clarifaiSetup = (imageUrl)=>{
 const handleApi = (req, res)=>{
     fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", clarifaiSetup(req.body.input))
         // .then(response => response.json())
-        .then(resp => resp.json())
+        // .then(resp => resp.json())
         .then(data => res.json(data))
         .catch(error => console.log('error', error));
 }
