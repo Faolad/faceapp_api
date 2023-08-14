@@ -2,10 +2,10 @@
   "name": "node",
   "version": "1.0.0",
   "main": "script.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon server.js",
     "build": "nodemon server.js"
-
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "knex": "^2.5.1",
+    "node-fetch": "^3.3.2",
     "pg": "^8.11.2"
   },
   "description": ""
