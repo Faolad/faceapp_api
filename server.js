@@ -55,17 +55,17 @@ app.use(cors());
 //     ]
 // }
 
-app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
+app.post('/signin', (req, res) => {handleSignin(req, res, db, bcrypt)})
 
 
 
-app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt)})
+app.post('/register', (req, res) => {handleRegister(req, res, db, bcrypt)})
 
-app.get('/profile/:id', (req, res) => {profile.profileGet(req, res, db)})
+app.get('/profile/:id', (req, res) => {profileGet(req, res, db)})
 
-app.put('/image', (req, res) => {image.imagePut(req, res, db)})
+app.put('/image', (req, res) => {imagePut(req, res, db)})
 
-app.post('/imageurl', (req, res) => {image.handleApi(req, res)})
+app.post('/imageurl', (req, res) => {handleApi(req, res)})
 
 
 app.get('/', (req,res) =>{
