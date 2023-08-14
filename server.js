@@ -31,27 +31,27 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 
-const database = {
-    users: [
-        {
-            id: '123',
-            name: 'fao',
-            email: 'fao@gmail.com',
-            password: 'faolad',
-            entries: 0,
-            joined: new Date()
-        },
-        {
-            id: '124',
-            name: 'lad',
-            email: 'lad@gmail.com',
-            password: 'ladfao',
-            entries: 0,
-            joined: new Date()
-        }
+// const database = {
+//     users: [
+//         {
+//             id: '123',
+//             name: 'fao',
+//             email: 'fao@gmail.com',
+//             password: 'faolad',
+//             entries: 0,
+//             joined: new Date()
+//         },
+//         {
+//             id: '124',
+//             name: 'lad',
+//             email: 'lad@gmail.com',
+//             password: 'ladfao',
+//             entries: 0,
+//             joined: new Date()
+//         }
         
-    ]
-}
+//     ]
+// }
 
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 
