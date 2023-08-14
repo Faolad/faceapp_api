@@ -34,7 +34,7 @@ const clarifaiSetup = (imageUrl)=>{
   return requestOptions
 }
 
-const handleApi = (req, res)=>{
+export const handleApi = (req, res)=>{
     fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", clarifaiSetup(req.body.input))
         // .then(response => response.json())
         .then(resp => resp.json())
@@ -50,7 +50,7 @@ const handleApi = (req, res)=>{
 // }
 
 
-const imagePut = (req, res, db) =>{
+export const imagePut = (req, res, db) =>{
     const {id} = req.body;
 
     db('users').where('id', '=', id)
@@ -74,7 +74,3 @@ const imagePut = (req, res, db) =>{
 
 }
 
-module.exports = {
-    imagePut,
-    handleApi
-}

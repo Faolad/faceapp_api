@@ -20,6 +20,4 @@ const profileGet = (req, res, db)=>{
     // }
 }
 
-module.exports ={
-    profileGet
-}
+export default profileGet;
