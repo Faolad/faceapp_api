@@ -1,14 +1,14 @@
-import express from 'express';
-import cors from 'cors';
-import bcrypt from 'bcrypt';
+const express = require('express');
+const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 
 import register from './controllers/register';
-import signin from './controllers/signin';
-import  profile from './controllers/profile';
-import image from './controllers/image';
+const signin = require('./controllers/signin');
+const profile = require('./controllers/profile');
+const image = require('./controllers/image');
 
-import knex from 'knex';
+const knex = require('knex')
 const db = knex({
     client: 'pg',
     connection: {
